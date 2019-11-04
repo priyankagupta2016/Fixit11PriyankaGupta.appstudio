@@ -1,12 +1,22 @@
-var exercises = ["pullups","pushups","situps","jogging","plank","curls"]
-var coreExercises = ["situps","plank"]
+let exercises = ["pushups","walking","situps","swimming", "jump rope","running","planks","biking"]
+let core = ["situps","plank"]
 
 favExercises.onshow=function(){
-
+  selExercises.clear()   
+    for (i = 0; i <= exercises.length - 1; i++) 
+    selExercises.addItem(exercises[i])
 }
 
-selExercises.onfocusout=function(){
-
+selExercises.onchange=function(){
+if (typeof(s) == "object")   
+      return                    
+    else { 
+        selExercises.value = s
+        NSB.MsgBox("You chose" + s + " and .selection is " + selExercises.selection)
+}
 }
 
 
+btnMobileNav.onclick=function(){
+   ChangeForm(mobileNav)
+}
